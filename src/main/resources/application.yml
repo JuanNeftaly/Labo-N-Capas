@@ -1,0 +1,27 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: Labo
+    security:
+      oauth2:
+        resourceserver:
+          jwt:
+            issuer-uri: http://localhost:3030/realms/Laboratorio
+    jpa:
+      database: postgresql
+      hibernate:
+        ddl-auto: update
+      show-sql: false
+      database-plataform: org.hibernate.dialect.PostgreSQLDialect
+    datasource:
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://localhost:5432/postgres
+      username: postgres
+      password: juan123
+
+keycloak:
+  server-url: http://localhost:3030
+  realm: Laboratorio
+  client-id: Laboratorio
+  client-secret: G0SFlpLCYs5YP9hqOFXQ4qAbkdBjHsMJ
